@@ -1,0 +1,8 @@
+.payment_method_zakhir .payment_box {
+    background: #f9f9f9;
+}
+
+.payment_method_zakhir img {
+    max-height: 36px;
+    vertical-align: middle;
+}

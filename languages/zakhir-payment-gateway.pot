@@ -1,0 +1,203 @@
+# Copyright (C) 2025 Digitalize Lab
+# This file is distributed under the MIT License.
+msgid ""
+msgstr ""
+"Project-Id-Version: Zakhir Payment Gateway 1.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/amolood/Zakhir-Woocommerce/issues\n"
+"POT-Creation-Date: 2025-05-14T00:00:00+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: WP-CLI 2.x\n"
+"X-Domain: zakhir-payment-gateway\n"
+
+#: zakhir-payment-gateway.php:41
+msgid "Zakhir Payment Gateway requires WooCommerce to be installed and active."
+msgstr ""
+
+#: zakhir-payment-gateway.php:71
+msgid "Settings"
+msgstr ""
+
+#: includes/class-wc-zakhir-gateway.php:22
+msgid "Zakhir"
+msgstr ""
+
+#: includes/class-wc-zakhir-gateway.php:23
+msgid "Accept payments through the Zakhir wallet — Sudan's leading digital payment gateway."
+msgstr ""
+
+#: includes/class-wc-zakhir-gateway.php:49
+msgid "Enable / Disable"
+msgstr ""
+
+#: includes/class-wc-zakhir-gateway.php:51
+msgid "Enable Zakhir Payment Gateway"
+msgstr ""
+
+#: includes/class-wc-zakhir-gateway.php:56
+msgid "Environment"
+msgstr ""
+
+#: includes/class-wc-zakhir-gateway.php:58
+msgid "Use Staging for testing, Production for live payments."
+msgstr ""
+
+#: includes/class-wc-zakhir-gateway.php:62
+msgid "Production"
+msgstr ""
+
+#: includes/class-wc-zakhir-gateway.php:63
+msgid "Staging"
+msgstr ""
+
+#: includes/class-wc-zakhir-gateway.php:68
+msgid "Title"
+msgstr ""
+
+#: includes/class-wc-zakhir-gateway.php:70
+msgid "Payment method title shown to the customer during checkout."
+msgstr ""
+
+#: includes/class-wc-zakhir-gateway.php:72
+msgid "Zakhir Wallet"
+msgstr ""
+
+#: includes/class-wc-zakhir-gateway.php:76
+msgid "Description"
+msgstr ""
+
+#: includes/class-wc-zakhir-gateway.php:78
+msgid "Payment method description shown to the customer during checkout."
+msgstr ""
+
+#: includes/class-wc-zakhir-gateway.php:80
+msgid "Pay securely using your Zakhir wallet."
+msgstr ""
+
+#: includes/class-wc-zakhir-gateway.php:84
+msgid "Production Credentials"
+msgstr ""
+
+#: includes/class-wc-zakhir-gateway.php:89
+msgid "API Base URL"
+msgstr ""
+
+#: includes/class-wc-zakhir-gateway.php:91
+msgid "Zakhir production API base URL."
+msgstr ""
+
+#: includes/class-wc-zakhir-gateway.php:97
+msgid "Tenant ID"
+msgstr ""
+
+#: includes/class-wc-zakhir-gateway.php:99
+msgid "Your Zakhir tenant identifier."
+msgstr ""
+
+#: includes/class-wc-zakhir-gateway.php:105
+msgid "Profile ID"
+msgstr ""
+
+#: includes/class-wc-zakhir-gateway.php:107
+msgid "Your Zakhir profile identifier."
+msgstr ""
+
+#: includes/class-wc-zakhir-gateway.php:113
+msgid "API Key"
+msgstr ""
+
+#: includes/class-wc-zakhir-gateway.php:115
+msgid "Your Zakhir API key."
+msgstr ""
+
+#: includes/class-wc-zakhir-gateway.php:121
+msgid "Staging Credentials"
+msgstr ""
+
+#: includes/class-wc-zakhir-gateway.php:126
+msgid "Staging API Base URL"
+msgstr ""
+
+#: includes/class-wc-zakhir-gateway.php:133
+msgid "Staging Tenant ID"
+msgstr ""
+
+#: includes/class-wc-zakhir-gateway.php:140
+msgid "Staging Profile ID"
+msgstr ""
+
+#: includes/class-wc-zakhir-gateway.php:147
+msgid "Staging API Key"
+msgstr ""
+
+#: includes/class-wc-zakhir-gateway.php:154
+msgid "Advanced"
+msgstr ""
+
+#: includes/class-wc-zakhir-gateway.php:159
+msgid "Webhook Secret"
+msgstr ""
+
+#: includes/class-wc-zakhir-gateway.php:163
+msgid "Optional HMAC-SHA256 secret for webhook verification. Your webhook URL is: <code>%s</code>"
+msgstr ""
+
+#: includes/class-wc-zakhir-gateway.php:170
+msgid "API Timeout (seconds)"
+msgstr ""
+
+#: includes/class-wc-zakhir-gateway.php:172
+msgid "Maximum seconds to wait for a response from the Zakhir API."
+msgstr ""
+
+#: includes/class-wc-zakhir-gateway.php:183
+msgid "Debug Logging"
+msgstr ""
+
+#: includes/class-wc-zakhir-gateway.php:185
+msgid "Enable debug logging"
+msgstr ""
+
+#: includes/class-wc-zakhir-gateway.php:188
+msgid "Log API requests and responses for debugging. Logs are available <a href=\"%s\">here</a>."
+msgstr ""
+
+#: includes/class-wc-zakhir-gateway.php:216
+msgid "Order #%s"
+msgstr ""
+
+#: includes/class-wc-zakhir-gateway.php:226
+msgid "Zakhir did not return a checkout URL."
+msgstr ""
+
+#: includes/class-wc-zakhir-gateway.php:234
+msgid "Awaiting Zakhir payment."
+msgstr ""
+
+#: includes/class-wc-zakhir-gateway.php:254
+msgid "Payment error: %s"
+msgstr ""
+
+#: includes/class-wc-zakhir-gateway.php:287
+msgid "Payment confirmed via Zakhir status poll on thank-you page."
+msgstr ""
+
+#: includes/class-zakhir-webhook-handler.php:89
+msgid "Payment completed via Zakhir. Payment ID: %s"
+msgstr ""
+
+#: includes/class-zakhir-webhook-handler.php:101
+msgid "Payment rejected by Zakhir."
+msgstr ""
+
+#: includes/class-zakhir-api.php:102
+msgid "Zakhir API connection error: %s"
+msgstr ""
+
+#: includes/class-zakhir-api.php:114
+msgid "Zakhir API returned HTTP %d"
+msgstr ""
