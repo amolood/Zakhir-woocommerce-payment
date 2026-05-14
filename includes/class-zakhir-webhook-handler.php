@@ -37,21 +37,6 @@ class Zakhir_Webhook_Handler {
             self::respond( 'order not found' );
         }
 
-        // Verify the secret token stored on the order.
-        $gateway  = WC_Zakhir_Gateway::instance();
-        $secret   = $gateway->get_option( 'webhook_secret' );
-
-        if ( ! empty( $secret ) ) {
-            $sig = $_SERVER['HTTP_X_ZAKHIR_SIGNATURE'] ?? ''; // phpcs:ignore WordPress.Security.ValidatedSanitizedInput
-            $sig = sanitize_text_field( $sig );
-            $expected = hash_hmac( 'sha256', $raw, $secret );
-            $provided = preg_replace( '/^sha256=/i', '', $sig );
-            if ( ! hash_equals( $expected, strtolower( $provided ) ) ) {
-                status_header( 401 );
-                self::respond( 'invalid signature' );
-            }
-        }
-
         switch ( $status ) {
             case 'COMPLETED':
                 self::handle_completed( $order, $zakhir_id, $reference_id, $payload );
@@ -74,7 +59,7 @@ class Zakhir_Webhook_Handler {
         array $payload
     ): void {
         if ( $order->is_paid() ) {
-            return; // Idempotent — already processed.
+            return;
         }
 
         $transaction_id = $zakhir_id ?: $reference_id;
@@ -102,9 +87,6 @@ class Zakhir_Webhook_Handler {
         );
     }
 
-    /**
-     * Find a WooCommerce order by Zakhir referenceId stored in order meta.
-     */
     private static function find_order( string $reference_id ): ?WC_Order {
         $orders = wc_get_orders( [
             'meta_key'   => '_zakhir_reference_id',

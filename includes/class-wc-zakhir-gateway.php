@@ -155,15 +155,14 @@ class WC_Zakhir_Gateway extends WC_Payment_Gateway {
                 'type'  => 'title',
             ],
 
-            'webhook_secret' => [
-                'title'       => __( 'Webhook Secret', 'zakhir-payment-gateway' ),
-                'type'        => 'password',
+            'webhook_url_info' => [
+                'title'       => __( 'Webhook URL', 'zakhir-payment-gateway' ),
+                'type'        => 'title',
                 'description' => sprintf(
                     /* translators: %s: webhook URL */
-                    __( 'Optional HMAC-SHA256 secret for webhook verification. Your webhook URL is: <code>%s</code>', 'zakhir-payment-gateway' ),
+                    __( 'Set this URL in your Zakhir merchant dashboard: <code>%s</code>', 'zakhir-payment-gateway' ),
                     esc_url( home_url( '/wc-api/zakhir' ) )
                 ),
-                'default'     => '',
             ],
 
             'timeout' => [

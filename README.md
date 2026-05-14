@@ -72,11 +72,10 @@ Fill in the staging equivalents when **Environment** is set to `Staging`.
 
 ### Advanced
 
-| Field              | Description                                                    |
-| ------------------ | -------------------------------------------------------------- |
-| **Webhook Secret** | Optional HMAC-SHA256 secret for webhook signature verification |
-| **API Timeout**    | Seconds to wait for Zakhir API responses (default: 15)         |
-| **Debug Logging**  | Logs API calls to WooCommerce → Status → Logs                  |
+| Field             | Description                                            |
+| ----------------- | ------------------------------------------------------ |
+| **API Timeout**   | Seconds to wait for Zakhir API responses (default: 15) |
+| **Debug Logging** | Logs API calls to WooCommerce → Status → Logs          |
 
 ---
 
@@ -89,10 +88,6 @@ POST https://yoursite.com/wc-api/zakhir
 ```
 
 Set this URL in your **Zakhir merchant dashboard** as the notification URL. Zakhir will POST payment status updates here when a payment is completed or rejected.
-
-### Optional Signature Verification
-
-If you configure a **Webhook Secret** in the plugin settings, every incoming webhook will be verified using HMAC-SHA256 against the `X-Zakhir-Signature` header. This is recommended for production.
 
 ---
 
