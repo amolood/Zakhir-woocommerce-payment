@@ -57,7 +57,7 @@ Go to **WooCommerce → Settings → Payments → Zakhir** and fill in the follo
 
 ### Production Credentials
 
-Obtain these from your [Zakhir merchant dashboard](https://zakhir.cloud):
+Obtain these from your [Zakhir merchant dashboard](https://zakhir.net):
 
 | Field            | Description                      |
 | ---------------- | -------------------------------- |
