@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/amolood/Zakhir-Woocommerce/main/assets/images/zakhir-logo.png" alt="Zakhir" width="160" />
+  <img src="https://raw.githubusercontent.com/amolood/Zakhir-woocommerce-payment/main/assets/images/zakhir-logo.png" alt="Zakhir" width="160" />
 
   <h1>Zakhir Payment Gateway for WooCommerce</h1>
 
