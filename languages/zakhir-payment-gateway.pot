@@ -87,7 +87,7 @@ msgid "API Base URL"
 msgstr ""
 
 #: includes/class-wc-zakhir-gateway.php:91
-msgid "Zakhir production API base URL."
+msgid "Provided by Zakhir upon merchant onboarding."
 msgstr ""
 
 #: includes/class-wc-zakhir-gateway.php:97

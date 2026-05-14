@@ -88,9 +88,9 @@ class WC_Zakhir_Gateway extends WC_Payment_Gateway {
             'base_url' => [
                 'title'       => __( 'API Base URL', 'zakhir-payment-gateway' ),
                 'type'        => 'text',
-                'description' => __( 'Zakhir production API base URL.', 'zakhir-payment-gateway' ),
+                'description' => __( 'Provided by Zakhir upon merchant onboarding.', 'zakhir-payment-gateway' ),
                 'desc_tip'    => true,
-                'default'     => 'https://zakhir.cloud/api/',
+                'default'     => '',
             ],
 
             'tenant' => [

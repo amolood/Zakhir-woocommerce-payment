@@ -90,8 +90,8 @@ msgid "API Base URL"
 msgstr "رابط API الأساسي"
 
 #: includes/class-wc-zakhir-gateway.php:91
-msgid "Zakhir production API base URL."
-msgstr "رابط API الأساسي لبيئة الإنتاج في زاخر."
+msgid "Provided by Zakhir upon merchant onboarding."
+msgstr "يتم توفيره من قِبل زاخر عند تسجيل التاجر."
 
 #: includes/class-wc-zakhir-gateway.php:97
 msgid "Tenant ID"

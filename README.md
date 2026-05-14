@@ -61,7 +61,7 @@ Obtain these from your [Zakhir merchant dashboard](https://zakhir.cloud):
 
 | Field            | Description                      |
 | ---------------- | -------------------------------- |
-| **API Base URL** | `https://zakhir.cloud/api/`      |
+| **API Base URL** | Provided by Zakhir upon merchant onboarding |
 | **Tenant ID**    | Your merchant tenant identifier  |
 | **Profile ID**   | Your merchant profile identifier |
 | **API Key**      | Your secret API key              |
