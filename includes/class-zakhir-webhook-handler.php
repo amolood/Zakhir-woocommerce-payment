@@ -37,6 +37,29 @@ class Zakhir_Webhook_Handler {
             self::respond( 'order not found' );
         }
 
+        // Zakhir does not sign its callbacks, so anyone can POST status=COMPLETED for a known
+        // referenceId. The request only says which order to look at: its status (and Zakhir's
+        // payment id) are read back from Zakhir, and nothing changes when Zakhir can't be asked.
+        $gateway = WC()->payment_gateways()->payment_gateways()['zakhir'] ?? null;
+
+        if ( ! $gateway instanceof WC_Zakhir_Gateway ) {
+            self::respond( 'received' );
+        }
+
+        try {
+            $verified = $gateway->get_api()->get_payment_status( $reference_id );
+        } catch ( Throwable $e ) {
+            wc_get_logger()->warning(
+                'Zakhir webhook: could not confirm the status with Zakhir: ' . $e->getMessage(),
+                [ 'source' => 'zakhir', 'reference_id' => $reference_id ]
+            );
+            self::respond( 'received' );
+        }
+
+        $status    = strtoupper( sanitize_text_field( (string) ( $verified['status'] ?? '' ) ) );
+        $zakhir_id = sanitize_text_field( (string) ( $verified['id'] ?? $zakhir_id ) );
+        $payload   = $verified;
+
         switch ( $status ) {
             case 'COMPLETED':
                 self::handle_completed( $order, $zakhir_id, $reference_id, $payload );
