@@ -57,7 +57,12 @@ class Zakhir_Webhook_Handler {
         }
 
         $status    = strtoupper( sanitize_text_field( (string) ( $verified['status'] ?? '' ) ) );
-        $zakhir_id = sanitize_text_field( (string) ( $verified['id'] ?? $zakhir_id ) );
+        // Only Zakhir's own answer (never the callback's id), and it must be about this order
+        if ( ! empty( $verified['referenceId'] ) && (string) $verified['referenceId'] !== $reference_id ) {
+            self::respond( 'received' );
+        }
+
+        $zakhir_id = sanitize_text_field( (string) ( $verified['id'] ?? '' ) );
         $payload   = $verified;
 
         switch ( $status ) {
